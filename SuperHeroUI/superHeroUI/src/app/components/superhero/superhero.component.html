@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <form class="d-flex" (submit)="searchHero()">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search hero"
+          aria-label="search"
+          [(ngModel)]="searchTerm"
+          name="searchTerm"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-primary ms-2" type="button" (click)="addHero()">Add Hero</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Power</th>
+      <th>Team</th>
+      <th>Level</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of superHeroes">
+      <td *ngIf="!hero.isEditing">{{ hero.name }}</td>
+      <td *ngIf="hero.isEditing">
+        <input [(ngModel)]="hero.name" class="form-control" />
+      </td>
+    
+      <td *ngIf="!hero.isEditing">{{ hero.superPowers }}</td>
+      <td *ngIf="hero.isEditing">
+        <input [(ngModel)]="hero.superPowers" class="form-control" />
+      </td>
+    
+      <td *ngIf="!hero.isEditing">{{ hero.team }}</td>
+      <td *ngIf="hero.isEditing">
+        <input [(ngModel)]="hero.team" class="form-control" />
+      </td>
+    
+      <td *ngIf="!hero.isEditing">{{ hero.level }}</td>
+      <td *ngIf="hero.isEditing">
+        <input [(ngModel)]="hero.level" class="form-control" type="number" />
+      </td>
+    
+      <td>
+        <button *ngIf="!hero.isEditing" (click)="editHero(hero)" class="btn btn-warning">Edit</button>
+        <button *ngIf="hero.isEditing" (click)="saveHero(hero)" class="btn btn-success">Save</button>
+        <button (click)="deleteHero(hero)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
