@@ -31,6 +31,5 @@ namespace SuperHeroWeb.Controllers
             adivinanzaService.ReiniciarJuegoPorQueAlPutoSeLeOcurre();
             return Ok("Juego reiniciado");
         }
-
     }
 }
