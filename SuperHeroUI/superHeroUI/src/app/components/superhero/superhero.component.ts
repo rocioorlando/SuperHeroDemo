@@ -12,7 +12,6 @@ export class SuperHeroComponent implements OnInit {
   searchTerm: string = '';
   newHero: SuperHero | null = null;
 
-
   constructor(private superHeroService: SuperHeroService) { }
 
   ngOnInit(): void {
@@ -105,7 +104,4 @@ export class SuperHeroComponent implements OnInit {
       }
     );
   }
-
-
-  
 }

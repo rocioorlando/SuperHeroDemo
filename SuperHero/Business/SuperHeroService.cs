@@ -56,11 +56,10 @@ namespace SuperHeroWeb.Business
                 throw new KeyNotFoundException($"Super héroe con ID {id} no encontrado.");
             }
         }
-
-
         public void DeleteSuperHero(int id)
         {
             superHeros.RemoveAll(sh => sh.Id == id);
         }
+
     }
 }

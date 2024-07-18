@@ -26,6 +26,13 @@ export class SuperHeroService {
       );
   }
 
+  obtenerNumeroRamdon(): Observable<number> {
+    return this.httpClient.get<number>(`${this.apiURL}/ObtenerNumeroRandom`)
+      .pipe(
+        catchError(this.errorHandler)
+      );
+  }
+
   getSuperHeroById(id: number): Observable<SuperHero> {
     return this.httpClient.get<SuperHero>(`${this.apiURL}/${id}`)
       .pipe(

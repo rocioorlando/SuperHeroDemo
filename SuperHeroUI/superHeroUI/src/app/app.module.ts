@@ -4,11 +4,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SuperHeroComponent } from './components/superhero/superhero.component';
 import { FormsModule } from '@angular/forms';
+import { AdivinanzaComponent } from './components/adivinanza/adivinanza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SuperHeroComponent
+    SuperHeroComponent,
+    AdivinanzaComponent
   ],
   imports: [
     BrowserModule,

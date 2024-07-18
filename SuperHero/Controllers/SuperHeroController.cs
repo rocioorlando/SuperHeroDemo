@@ -114,5 +114,37 @@ namespace SuperHeroWeb.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        //[HttpPost]
+        //public IActionResult AdivinarNumero(int number, int numberRandom)
+        //{
+        //    try
+        //    {
+        //        var mensaje = superHeroService.adivinarNumero(number, numberRandom);
+
+        //        return CreatedAtAction(nameof(AdivinarNumero), mensaje);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //}
+
+        //[HttpGet]
+        //[Route("ObtenerNumeroRandom")]
+        //public IActionResult ObtenerNumeroRandom()
+        //{
+        //    try
+        //    {
+        //        var numero = superHeroService.GenerarNumeroAleatorio();
+        //        return Ok(numero);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //}
+
+
     }
 }

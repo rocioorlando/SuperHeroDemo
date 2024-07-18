@@ -14,6 +14,8 @@ builder.Services.AddSwaggerGen();
 
 // Register services here
 builder.Services.AddSingleton<ISuperHeroService, SuperHeroService>();
+builder.Services.AddSingleton<IAdivinanzaService, AdivinanzaService>();
+
 
 // Configuration CORS
 builder.Services.AddCors(options =>
