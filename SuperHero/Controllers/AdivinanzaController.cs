@@ -28,7 +28,7 @@ namespace SuperHeroWeb.Controllers
         [Route("PostReiniciar")]
         public IActionResult PostReiniciar()
         {
-            adivinanzaService.ReiniciarJuegoPorQueAlPutoSeLeOcurre();
+            adivinanzaService.ReiniciarJuego();
             return Ok("Juego reiniciado");
         }
     }

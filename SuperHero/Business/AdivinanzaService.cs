@@ -15,7 +15,7 @@ namespace SuperHeroWeb.Business
             numeroRandom = new Random().Next(1, 100);
         }
 
-        public void ReiniciarJuegoPorQueAlPutoSeLeOcurre() 
+        public void ReiniciarJuego() 
         {
             intentos = 0;
             numeroRandom = new Random().Next(1, 100);

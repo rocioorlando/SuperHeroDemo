@@ -3,6 +3,6 @@
     public interface IAdivinanzaService
     {
         string ValidarNumero(int numeroUsuario);
-        void ReiniciarJuegoPorQueAlPutoSeLeOcurre();
+        void ReiniciarJuego();
     }
 }
